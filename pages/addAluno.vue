@@ -2,7 +2,7 @@
     <main class="container my-5">
         <div class="row">
             <div class="col-12 text-center my-3">
-                <h2 class="mb-3 display-4 text-uppercase">Entrar no Sistema</h2>
+                <h3 class="mb-3 display-4 text-uppercase">Adicionar novo aluno</h3>
         </div>
 
         <div class="col-12 text-center my-3 ">

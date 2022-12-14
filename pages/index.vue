@@ -5,6 +5,8 @@
       <p class="mt-3">Sistema para reserva de computadores na Fabrica de Software</p>
       <nuxt-link class="btn btn-outline btn-large btn-info" to="/login">Entrar no Sistema <span class="ml-2">&rarr;</span>
       </nuxt-link>
+      <nuxt-link class="btn btn-outline btn-large btn-info" to="/coordenador">Área do Coordenador<span class="ml-2">&rarr;</span>
+      </nuxt-link>
     </div>
   </header>
 </template>
