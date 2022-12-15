@@ -78,21 +78,21 @@ export default {
         
         async adicionaReserva(){
             
-             const config = {
-                 headers: {"content-type": "multipart/form-data"}
-             };
-             let formData = new FormData();
-             for (let data in this.reserva){
-                 formData.append(data, this.reserva[data]);
-             }
+              const config = {
+                  headers: {"content-type": "multipart/form-data"}
+              };
+              let formData = new FormData();
+              for (let data in this.reserva){
+                  formData.append(data, this.reserva[data]);
+              }
       
-            try{
-                let response = await this.$axios.$post("/reserva/", formData, config);
-                this.$router.push("/coordenador");
-                return alert("Agendamento concluido!");
-            }catch(e){
-                alert("campos vazios");
-            }
+             try{
+                 let response = await this.$axios.$post("/reserva/", formData, config);
+                 this.$router.push("/coordenador");
+                 return alert("Agendamento concluido!");
+             }catch(e){
+                 alert("campos vazios");
+             }
         }
     }
 }
