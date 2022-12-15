@@ -4,8 +4,8 @@
             <div class="col-12 text-center my-3">
                 <h3 class="mb-3 display-4 text-uppercase">Reservar Computador</h3>
         </div>
-
-        <div class="col-12 text-center my-3 ">
+        <div class="col-2"></div>
+        <div class="col-8 text-center my-3 ">
             <form @submit.prevent="adicionaReserva">
                 <div class="form-group">
                     <label >Data</label>
@@ -39,6 +39,7 @@
                 <button type="submit" class="btn btn-primary">Adicionar</button>
             </form>
         </div>
+        <div class="col-2"></div>
         </div>
     </main>
 </template>
@@ -77,14 +78,14 @@ export default {
         
         async adicionaReserva(){
             
-            const config = {
-                headers: {"content-type": "multipart/form-data"}
-            };
-            let formData = new FormData();
-            for (let data in this.reserva){
-                formData.append(data, this.reserva[data]);
-            }
-
+             const config = {
+                 headers: {"content-type": "multipart/form-data"}
+             };
+             let formData = new FormData();
+             for (let data in this.reserva){
+                 formData.append(data, this.reserva[data]);
+             }
+      
             try{
                 let response = await this.$axios.$post("/reserva/", formData, config);
                 this.$router.push("/coordenador");

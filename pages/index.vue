@@ -3,9 +3,7 @@
     <div class="text-box">
       <h1>Reserva de computadores</h1>
       <p class="mt-3">Sistema para reserva de computadores na Fabrica de Software</p>
-      <nuxt-link class="btn btn-outline btn-large btn-info" to="/login">Entrar no Sistema <span class="ml-2">&rarr;</span>
-      </nuxt-link>
-      <nuxt-link class="btn btn-outline btn-large btn-info" to="/coordenador">Área do Coordenador<span class="ml-2">&rarr;</span>
+      <nuxt-link class="btn btn-outline btn-large btn-info" to="/coordenador">Ir para área de reservas<span class="ml-2">&rarr;</span>
       </nuxt-link>
     </div>
   </header>
@@ -31,13 +29,12 @@ header {
 }
 .text-box {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 10%;
-  transform: translateY(-50%);
   color: black;
 }
 .text-box h1 {
-  font-family: cursive;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 5rem;
 }
 .text-box p {

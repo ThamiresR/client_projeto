@@ -16,14 +16,7 @@
                         <div class="table-title">
                             <div class="row">
                                 <div class="col-sm-6"><h2>Horarios reservados</h2></div>
-                                <div class="col-sm-4">
-                                    <div class="search-box">
-                                        <input type="text" class="form-control" v-model="search" placeholder="Pesquisar">
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <b-button title="Limpar filtro" v-b-tooltip.hover @click="limparFiltro">Limpar</b-button>
-                                </div>
+                                
                             </div>
                         </div>
                         <table class="table table-striped table-hover table-bordered">
@@ -37,7 +30,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="horario in horarios" :key="i">
+                                <tr v-for="horario in horarios" >
                                     <th scope="row">{{ horario.id  }}</th>  
                                     <td>{{ horario.data }}</td> 
                                     <td>{{listaHorario[horario.horario] }}</td> 
@@ -87,19 +80,12 @@ export default {
                 "6": "15:00 às 16:00",
                 "7": "16:00 às 17:00",
             },
-            search:"",
-            
         };
     },
     methods:{
-        limparFiltro(){
-            this.search = "";
-        }
-        
     }
 }
 </script>
 
 <style>
-
 </style>

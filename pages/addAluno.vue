@@ -4,8 +4,8 @@
             <div class="col-12 text-center my-3">
                 <h3 class="mb-3 display-4 text-uppercase">Adicionar novo aluno</h3>
         </div>
-
-        <div class="col-12 text-center my-3 ">
+        <div class="col-2"></div>
+        <div class="col-8 text-center my-3 ">
             <form @submit.prevent="adicionaAluno">
                 <div class="form-group">
                     <label >Nome</label>
@@ -23,9 +23,10 @@
                     <label>Senha</label>
                     <input type="password" class="form-control" v-model="aluno.senha">
                 </div>
-                <button type="submit" class="btn btn-primary">Entrar</button>
+                <button type="submit" class="btn btn-primary">Adicionar</button>
             </form>
         </div>
+        <div class="col-2"></div>
         </div>
     </main>
 </template>

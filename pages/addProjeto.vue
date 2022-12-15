@@ -4,8 +4,8 @@
             <div class="col-12 text-center my-3">
                 <h2 class="mb-3 display-4 text-uppercase">Adicionar Projeto</h2>
         </div>
-
-        <div class="col-12 text-center my-3 ">
+        <div class="col-2"></div>
+        <div class="col-8 text-center my-3 ">
             <form @submit.prevent="adicionaProjeto">
                 <div class="form-group">
                     <label >Titulo</label>
@@ -33,6 +33,7 @@
                 <button type="submit" class="btn btn-primary">Adicionar</button>
             </form>
         </div>
+        <div class="col-2"></div>
         </div>
     </main>
 </template>
