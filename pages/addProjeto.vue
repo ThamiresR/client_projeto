@@ -54,6 +54,7 @@ export default {
     },
     data(){
         return{
+            errors: [],
             coordenadores:[],
             projeto:{
                 titulo:"",
@@ -79,7 +80,7 @@ export default {
                 this.$router.push("/coordenador");
                 return alert("Projeto criado!");
             }catch(e){
-                console.log(e);
+                alert("campos vazios");
             }
         }
     }

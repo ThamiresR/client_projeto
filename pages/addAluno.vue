@@ -61,7 +61,7 @@ export default {
                 this.$router.push("/coordenador");
                 return alert("Novo aluno cadastrado!");
             }catch(e){
-                console.log(e);
+                alert("campos vazios");
             }
         }
     }

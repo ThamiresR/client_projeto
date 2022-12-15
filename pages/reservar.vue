@@ -54,7 +54,8 @@ export default {
         try{
             let alunos  = await $axios.$get(`/aluno/`);
             let computadores = await $axios.$get(`/computador/`);
-            return {alunos, computadores};
+            let horarios = await $axios.$get(`/reserva/`);
+            return {alunos, computadores, horarios};
         }catch (e){
             return {alunos:[], computadores:[]};
         }
@@ -63,6 +64,7 @@ export default {
         return{
             alunos:[],
             computadores:[],
+            horarios : [],
             reserva:{
                 data:"",
                 horario: "",
@@ -72,7 +74,9 @@ export default {
         };
     },
     methods:{
+        
         async adicionaReserva(){
+            
             const config = {
                 headers: {"content-type": "multipart/form-data"}
             };
@@ -80,13 +84,13 @@ export default {
             for (let data in this.reserva){
                 formData.append(data, this.reserva[data]);
             }
-            
+
             try{
                 let response = await this.$axios.$post("/reserva/", formData, config);
-                this.$router.push("/");
+                this.$router.push("/coordenador");
                 return alert("Agendamento concluido!");
             }catch(e){
-                console.log(e);
+                alert("campos vazios");
             }
         }
     }
